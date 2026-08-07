@@ -26,7 +26,7 @@ export function CanvasView({ state, scale = 4, className }: Props) {
       ref={canvasRef}
       width={state.size * scale}
       height={state.size * scale}
-      className={`pixelated rounded border border-white/10 ${className ?? ""}`}
+      className={`pixelated rounded border border-white/10 max-w-full h-auto ${className ?? ""}`}
     />
   );
 }
