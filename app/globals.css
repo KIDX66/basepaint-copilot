@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MEK Sans / MEK Mono aren't on Google Fonts — self-host the files from
+   https://www.mek.gallery (per ai.txt) and point @font-face at them here.
+   Roboto Mono can stay a Google Fonts import in app/layout.tsx. */
+@font-face {
+  font-family: "MEK Sans";
+  src: url("/fonts/MEKSans.otf") format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "MEK Mono";
+  src: url("/fonts/MEKMono.otf") format("opentype");
+  font-display: swap;
+}
+
+body {
+  background: #0a0e17;
+  color: #f5f7fa;
+}
+
+/* Keep pixel art crisp when scaled via CSS as a fallback to canvas scaling */
+.pixelated {
+  image-rendering: pixelated;
+}
